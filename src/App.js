@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// importing using tippy 
+import Tippy from "@tippyjs/react";
+
+// this below import is for the styling of toltip component and is optional
+import "tippy.js/dist/tippy.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="my-container">
+      
+      {/* we are using Tippy component which can pass different prop, like here we are  using placement prop  
+          The String passed in over the content prop will be displayed besides the button
+      */
+      }
+      <Tippy placement="right" content="Thanks for Hovering!, I am a tooltip ">
+        <button>Hover me</button>  
+      </Tippy>
     </div>
   );
 }
