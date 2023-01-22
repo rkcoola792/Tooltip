@@ -6,6 +6,7 @@ import { useState } from "react";
 import "tippy.js/dist/tippy.css";
 
 function App() {
+  // using state variables to store the state of position
   const [position, setPosition] = useState("right");
 
   return (
@@ -14,6 +15,7 @@ function App() {
           The String passed in over the content prop will be displayed besides the button
       */}
 
+      {/* creatng a dropdown to select the position of hovering */}
       <form action="">
         <label for="position" className="label">
           <h3>Choose a Position for Hover </h3>{" "}
@@ -34,6 +36,7 @@ function App() {
         </select>
       </form>
 
+          {/* using the Tippy component for tooltip */}
       <Tippy
         placement={position}
         content="Thanks for Hovering!, I am a tooltip "
